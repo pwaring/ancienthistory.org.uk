@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient History UK</title>
+    <link rel="stylesheet" href="/css/simple.min.css">
+</head>
+<body>
+  <header>
+    <h1>Ancient History UK</h1>
+    <p>Paul's collection of ancient history (Roman and Greek) resources</p>
+    <nav>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+      <a href="{{ url_for('groups.index') }}">Groups</a>
+      <a href="{{ url_for('talks.index') }}">Talks</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ block('content') }}
+  </main>
+
+  <footer>
+    <p>Copyright 2022 Paul Waring.</p>
+  </footer>
+</body>
+</html>
