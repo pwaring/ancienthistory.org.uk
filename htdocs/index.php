@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Controllers\PageController;
+use AncientHistory\Controllers\PageController;
 use DI\Container;
 use Psr\Container\ContainerInterface;
 use Slim\Factory\AppFactory;
