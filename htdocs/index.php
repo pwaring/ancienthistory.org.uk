@@ -27,7 +27,7 @@ $container = new Container();
 AppFactory::setContainer($container);
 
 // Register all dependencies
-$container->set('view', function () {
+$container->set('view', static function () {
     $twig = Twig::create(
         __DIR__ . '/../templates',
         [
@@ -39,7 +39,7 @@ $container->set('view', function () {
     return $twig;
 });
 
-$container->set('database', function() {
+$container->set('database', static function() {
     $connection = [
         'driver' => 'pdo_mysql',
         'user' => $_ENV['APP_DATABASE_USER'],
