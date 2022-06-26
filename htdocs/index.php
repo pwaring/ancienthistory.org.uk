@@ -54,7 +54,7 @@ $container->set('database', function() {
 });
 
 // Register all controllers
-$container->set('PageController', function (ContainerInterface $container) {
+$container->set(PageController::class, function (ContainerInterface $container) {
     $view = $container->get('view');
 
     return new PageController($view);
@@ -66,10 +66,10 @@ $app->addRoutingMiddleware();
 $app->addBodyParsingMiddleware();
 $app->add(TwigMiddleware::createFromContainer($app));
 
-$app->get('/', 'PageController:index')->setName('index');
-$app->get('/about/', 'PageController:about')->setName('about');
-$app->get('/contact/', 'PageController:contact')->setName('contact');
-$app->get('/groups/', 'PageController:groups')->setName('groups.index');
-$app->get('/talks/', 'PageController:talks')->setName('talks.index');
+$app->get('/', PageController::class . ':index')->setName('index');
+$app->get('/about/', PageController::class . ':about')->setName('about');
+$app->get('/contact/', PageController::class . ':contact')->setName('contact');
+$app->get('/groups/', PageController::class . ':groups')->setName('groups.index');
+$app->get('/talks/', PageController::class . ':talks')->setName('talks.index');
 
 $app->run();
