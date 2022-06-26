@@ -26,6 +26,15 @@ class PageController
         );
     }
 
+    public function about(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    {
+        return $this->view->render(
+            $response,
+            'about/index.twig.html',
+            []
+        );
+    }
+
     public function contact(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
         return $this->view->render(

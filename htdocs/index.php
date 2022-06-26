@@ -67,6 +67,7 @@ $app->addBodyParsingMiddleware();
 $app->add(TwigMiddleware::createFromContainer($app));
 
 $app->get('/', 'PageController:index')->setName('index');
+$app->get('/about/', 'PageController:about')->setName('about');
 $app->get('/contact/', 'PageController:contact')->setName('contact');
 $app->get('/groups/', 'PageController:groups')->setName('groups.index');
 $app->get('/talks/', 'PageController:talks')->setName('talks.index');
