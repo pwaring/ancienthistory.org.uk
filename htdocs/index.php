@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use AncientHistory\Controllers\PageController;
 use DI\Container;
+use Doctrine\ORM\ORMSetup;
 use Psr\Container\ContainerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
@@ -48,7 +49,7 @@ $container->set('database', static function() {
         'host' => $_ENV['APP_DATABASE_HOST']
     ];
 
-    $config = Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration([]);
+    $config = ORMSetup::createAnnotationMetadataConfiguration([]);
 
     return Doctrine\ORM\EntityManager::create($connection, $config);
 });
