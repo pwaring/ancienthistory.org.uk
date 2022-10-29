@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.4",
         "ext-mysqli": "*",
         "slim/slim": "4.*",
         "slim/psr7": "^1.5",
@@ -44,7 +44,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.3.31"
+            "php": "7.4.30"
         }
     }
 }
