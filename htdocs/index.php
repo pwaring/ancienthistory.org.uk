@@ -43,7 +43,7 @@ $container->set('view', static function () {
     return $twig;
 });
 
-$container->set('database', static function() {
+$container->set('database', static function () {
     $connection = [
         'driver' => 'pdo_mysql',
         'user' => $_ENV['APP_DATABASE_USER'],
