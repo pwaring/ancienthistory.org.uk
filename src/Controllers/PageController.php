@@ -53,6 +53,15 @@ class PageController
         );
     }
 
+    public function ma(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    {
+        return $this->view->render(
+            $response,
+            'ma/index.twig.html',
+            []
+        );
+    }
+
     public function talks(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
         return $this->view->render(
