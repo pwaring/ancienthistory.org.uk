@@ -17,8 +17,11 @@ class PageController
         $this->view = $view;
     }
 
-    public function index(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function index(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'index.twig.html',
@@ -26,8 +29,11 @@ class PageController
         );
     }
 
-    public function about(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function about(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'about/index.twig.html',
@@ -35,8 +41,11 @@ class PageController
         );
     }
 
-    public function contact(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function contact(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'contact/index.twig.html',
@@ -44,8 +53,11 @@ class PageController
         );
     }
 
-    public function groups(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function groups(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'groups/index.twig.html',
@@ -53,8 +65,11 @@ class PageController
         );
     }
 
-    public function ma(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function ma(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'ma/index.twig.html',
@@ -62,8 +77,11 @@ class PageController
         );
     }
 
-    public function talks(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
-    {
+    public function talks(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
         return $this->view->render(
             $response,
             'talks/index.twig.html',
