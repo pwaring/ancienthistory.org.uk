@@ -82,10 +82,6 @@ if (!WHOOPS_ENABLED) {
     $app->add($errorMiddleware);
 }
 
-$app->get('/', PageController::class . ':index')->setName('index');
-$app->get('/about/', PageController::class . ':about')->setName('about');
-$app->get('/contact/', PageController::class . ':contact')->setName('contact');
-$app->get('/groups/', PageController::class . ':groups')->setName('groups.index');
-$app->get('/talks/', PageController::class . ':talks')->setName('talks.index');
+require_once __DIR__ . '/../routes.php';
 
 $app->run();
