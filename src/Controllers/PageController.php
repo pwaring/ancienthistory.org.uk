@@ -65,6 +65,18 @@ class PageController
         );
     }
 
+    public function languages(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
+        return $this->view->render(
+            $response,
+            'languages/index.twig.html',
+            []
+        );
+    }
+
     public function ma(
         ServerRequestInterface $request,
         ResponseInterface $response,
