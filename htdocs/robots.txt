@@ -1,2 +1,7 @@
+# Block IONOS bot
 User-agent: IonCrawl
+Disallow: /
+
+# Block OpenAI
+User-agent: GPTBot
 Disallow: /
