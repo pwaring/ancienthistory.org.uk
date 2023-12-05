@@ -89,6 +89,18 @@ class PageController
         );
     }
 
+    public function quizzes(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
+    ): ResponseInterface {
+        return $this->view->render(
+            $response,
+            'quizzes/index.twig.html',
+            []
+        );
+    }
+
     public function talks(
         ServerRequestInterface $request,
         ResponseInterface $response,

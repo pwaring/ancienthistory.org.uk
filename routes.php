@@ -12,4 +12,5 @@ $app->get('/contact/', PageController::class . ':contact')->setName('contact');
 $app->get('/groups/', PageController::class . ':groups')->setName('groups.index');
 $app->get('/languages/', PageController::class . ':languages')->setName('languages.index');
 $app->get('/ma/', PageController::class . ':ma')->setName('ma.index');
+$app->get('/quizzes/', PageController::class . ':quizzes')->setName('quizzes.index');
 $app->get('/talks/', PageController::class . ':talks')->setName('talks.index');
