@@ -19,8 +19,7 @@ class PageController
 
     public function index(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -31,8 +30,7 @@ class PageController
 
     public function about(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -43,8 +41,7 @@ class PageController
 
     public function contact(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -55,8 +52,7 @@ class PageController
 
     public function groups(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -67,8 +63,7 @@ class PageController
 
     public function languages(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -79,8 +74,7 @@ class PageController
 
     public function ma(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -91,8 +85,7 @@ class PageController
 
     public function quizzes(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
@@ -103,8 +96,7 @@ class PageController
 
     public function talks(
         ServerRequestInterface $request,
-        ResponseInterface $response,
-        array $args
+        ResponseInterface $response
     ): ResponseInterface {
         return $this->view->render(
             $response,
