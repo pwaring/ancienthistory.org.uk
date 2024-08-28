@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AncientHistory\Controllers;
+namespace AncientHistory\Controller;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

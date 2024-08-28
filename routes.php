@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use AncientHistory\Controllers\PageController;
+use AncientHistory\Controller\PageController;
 
 /** @var \Slim\App $app */
 
