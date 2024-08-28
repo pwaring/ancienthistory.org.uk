@@ -10,6 +10,9 @@ use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->required([
+    'APP_DEFAULT_TIMEZONE'
+]);
 $dotenv->load();
 
 if (isset($_ENV['APP_WHOOPS']) && $_ENV['APP_WHOOPS'] === 'on') {
