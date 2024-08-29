@@ -10,3 +10,21 @@ services:
       - .:/var/www/sites/docker.localhost
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    depends_on:
+      - database
+
+  database:
+      image: mariadb:10.11
+      environment:
+        MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+        MYSQL_DATABASE: "ancient_history"
+        MYSQL_USER: "ancient_history"
+        MYSQL_PASSWORD: "ancient_history"
+      ports:
+        - "33068:3306"
+      volumes:
+        - database:/var/lib/mysql
+        - ./docker/mysql/initial_sql/:/docker-entrypoint-initdb.d/:ro
+
+volumes:
+  database:

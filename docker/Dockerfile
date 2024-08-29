@@ -10,7 +10,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
         libzip-dev \
         libicu-dev
 
-RUN docker-php-ext-install intl
+RUN docker-php-ext-install intl mysqli pdo pdo_mysql
 
 RUN pecl install xdebug-3.3.2 && docker-php-ext-enable xdebug
 

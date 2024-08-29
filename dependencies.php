@@ -12,7 +12,11 @@ use Slim\Views\TwigMiddleware;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 $dotenv->required([
-    'APP_DEFAULT_TIMEZONE'
+    'APP_DEFAULT_TIMEZONE',
+    'APP_DATABASE_USER',
+    'APP_DATABASE_PASSWORD',
+    'APP_DATABASE_NAME',
+    'APP_DATABASE_HOST',
 ]);
 
 if (isset($_ENV['APP_WHOOPS']) && $_ENV['APP_WHOOPS'] === 'on') {
