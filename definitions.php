@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 
+use AncientHistory\Entity\LatinWorksheetVerb;
+use AncientHistory\Repository\LatinWorksheetVerbRepository;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMSetup;
+use Psr\Container\ContainerInterface;
 use Slim\Views\Twig;
 use Twig\Extra\Intl\IntlExtension;
 
@@ -38,6 +41,12 @@ $definitions[EntityManager::class] = function () {
     );
 
     return new EntityManager($connection, $config);
+};
+
+$definitions[LatinWorksheetVerbRepository::class] = function (ContainerInterface $container): LatinWorksheetVerbRepository {
+    /** @var EntityManager $entityManager */
+    $entityManager = $container->get(EntityManager::class);
+    return $entityManager->getRepository(LatinWorksheetVerb::class);
 };
 
 return $definitions;
