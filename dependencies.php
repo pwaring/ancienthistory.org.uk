@@ -17,6 +17,8 @@ $dotenv->required([
     'APP_DATABASE_PASSWORD',
     'APP_DATABASE_NAME',
     'APP_DATABASE_HOST',
+    'APP_DOCTRINE_DEV_MODE',
+    'APP_DOCTRINE_PROXY_DIR',
 ]);
 
 if (isset($_ENV['APP_WHOOPS']) && $_ENV['APP_WHOOPS'] === 'on') {

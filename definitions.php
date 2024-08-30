@@ -27,7 +27,15 @@ $definitions[Twig::class] = function () {
 };
 
 $definitions[EntityManager::class] = function () {
-    $config = ORMSetup::createAttributeMetadataConfiguration([]);
+    $config = ORMSetup::createAttributeMetadataConfiguration(
+        [
+            [
+                __DIR__ . '/src/Entity/',
+            ],
+            $_ENV['APP_DOCTRINE_DEV_MODE'] === 'on',
+            $_ENV['APP_DOCTRINE_PROXY_DIR']
+        ]
+    );
 
     $connection = DriverManager::getConnection(
         [
