@@ -1,0 +1,17 @@
+label {
+    font-weight: bold;
+}
+
+.form-error {
+    color: red;
+}
+
+table {
+    display: table;
+}
+
+@media print {
+    .pagebreak {
+        page-break-after: always;
+    }
+}

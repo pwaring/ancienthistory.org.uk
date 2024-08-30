@@ -1,0 +1,50 @@
+{% extends 'base-print.twig.html' %}
+{% block title %}Latin Worksheet Verbs{% endblock %}
+{% block content %}
+  <h2>Questions</h2>
+
+  {% if (worksheet.latinEnglish | length) > 0 %}
+    <h3>Latin to English</h3>
+
+    <ol>
+        {% for question in worksheet.latinEnglish %}
+            <li>{{ question.latin }}</li>
+        {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if (worksheet.englishLatin | length) > 0 %}
+    <h3>English to Latin</h3>
+
+    <ol>
+        {% for question in worksheet.englishLatin %}
+            <li>{{ question.english }}</li>
+        {% endfor %}
+    </ol>
+  {% endif %}
+
+  <br style="break-after: page;"><br style="break-after: page;">
+
+  <h2>Answers</h2>
+
+  {% if (worksheet.latinEnglish | length) > 0 %}
+    <h3>Latin to English</h3>
+
+    <ol>
+        {% for question in worksheet.latinEnglish %}
+            <li>{{ question.latin }}: {{ question.english }}</li>
+        {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if (worksheet.englishLatin | length) > 0 %}
+    <h3>English to Latin</h3>
+
+    <ol>
+        {% for question in worksheet.englishLatin %}
+            <li>{{ question.english }}: {{ question.latin }}</li>
+        {% endfor %}
+    </ol>
+  {% endif %}
+{% endblock %}
+ 
