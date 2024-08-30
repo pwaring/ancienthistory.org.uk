@@ -37,7 +37,10 @@
     "autoload": {
         "psr-4": {
             "AncientHistory\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+            "src/Migration"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
