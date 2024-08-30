@@ -3,7 +3,7 @@
 {% block content %}
   <h2>Latin Worksheet Verbs</h2>
  
-  <form action="{{ url_for('latin.worksheet.verbs.store') }}" method="post" novalidate>
+  <form action="{{ url_for('latin.worksheet.verbs.store') }}" method="post">
     {% if errors.general is defined %}
         <p class="form-error">{{ errors.general }}</p>
     {% endif %}
@@ -15,14 +15,14 @@
         {% endif %}
         {% for verb in verbs %}
         <label>
-            <input name="verbs[{{ verb.getId() }}]" type="checkbox" value="1"> {{ verb.getFirstPersonSingularLatin() }}
+            <input name="verbs[{{ verb.getId() }}]" type="checkbox" value="1" {{ form.verbs[verb.getId()] is defined ? 'checked' : '' }}> {{ verb.getFirstPersonSingularLatin() }}
         </label>
         {% endfor %}
     </p>
 
     <p>
         <label for="latin_english_exercises_number">Number of Latin to English exercises</label>
-        <input id="latin_english_exercises_number" name="latin_english_exercises_number" type="number" min="0" max="60" value="" required>
+        <input id="latin_english_exercises_number" name="latin_english_exercises_number" type="number" min="0" max="60" value="{{ form.latin_english_exercises_number ?? '' }}" required>
         {% if errors.latin_english_exercises_number is defined %}
             <br><span class="form-error">{{ errors.latin_english_exercises_number }}</span>
         {% else %}
@@ -32,7 +32,7 @@
 
     <p>
         <label for="english_latin_exercises_number">Number of English to Latin exercises</label>
-        <input id="english_latin_exercises_number" name="english_latin_exercises_number" type="number" min="0" max="60" value="" required>
+        <input id="english_latin_exercises_number" name="english_latin_exercises_number" type="number" min="0" max="60" value="{{ form.english_latin_exercises_number ?? '' }}" required>
         {% if errors.english_latin_exercises_number is defined %}
             <br><span class="form-error">{{ errors.english_latin_exercises_number }}</span>
         {% else %}
