@@ -1,8 +1,7 @@
 {
-    "name": "phpdev-uk/slim-skeleton",
-    "description": "Skeleton Slim 4 application",
+    "name": "pwaring/ancienthistory.org.uk",
+    "description": "Ancient History UK",
     "type": "project",
-    "license": "MIT",
     "authors": [
         {
             "name": "Paul Waring",
